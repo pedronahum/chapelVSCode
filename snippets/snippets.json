@@ -1,0 +1,109 @@
+{
+	"if": {
+        "prefix": "if",
+        "body": [
+            "if (${expression})",
+            "\t${pass}"
+        ],
+        "description": "Code snippet for an if statement",
+		"scope": "source.chapel"
+    },
+    "if/else": {
+        "prefix": "if/else",
+        "body": [
+            "if (${condition}) {",
+            "\t${1:pass}",
+            "} else {",
+            "\t${2:pass} \n}"
+        ],
+        "description": "Code snippet for an if statement with else",
+		"scope": "source.chapel"
+    },
+	"elseif": {
+        "prefix": "else if",
+        "body": [
+            "else if (${expression}) {",
+            "\t${pass} \n}"
+        ],
+        "description": "Code snippet for an elif",
+		"scope": "source.chapel"
+    },
+    "else": {
+        "prefix": "else",
+        "body": [
+            "else {",
+            "\t${pass} \n}"
+        ],
+        "description": "Code snippet for an else",
+		"scope": "source.chapel"
+    },
+	"while": {
+        "prefix": "while",
+        "body": [
+            "while (${expression}) {",
+            "\t${pass} \n}"
+        ],
+        "description": "Code snippet for a while loop",
+		"scope": "source.chapel"
+    },
+    "dowhile": {
+        "prefix": "do-while",
+        "body": [
+            "do {",
+            "\t${pass} \n",
+            "} while (${expression})"
+            
+        ],
+        "description": "Code snippet for a do-while loop",
+		"scope": "source.chapel"
+    },
+     "for": {
+        "prefix": "for",
+        "body": [
+            "for ${target_list} in ${expression_list} {",
+            "\t${pass} \n}"
+        ],
+        "description": "Code snippet for a for loop"
+    },
+	"proc": {
+		"prefix": "proc",
+		"body": 
+        [
+        "proc ${procedure_name}(${parameter_list}): ${return_type}",  
+        "\t${pass} \n}"
+        ],
+		"description": "Code snippet for a procedure definition",
+		"scope": "source.chapel"
+	},
+    "record": {
+		"prefix": "record",
+		"body": 
+        [
+        "record ${record_name} {",  
+        "\tvar ${field_name}: ${field_type}; \n}"
+        ],
+		"description": "Code snippet for a record definition",
+		"scope": "source.chapel"
+	},
+    "class": {
+		"prefix": "class",
+		"body": 
+        [
+        "class ${class_name} {",  
+        "\tvar ${field_name}: ${field_type}; \n}"
+        ],
+		"description": "Code snippet for a class definition",
+		"scope": "source.chapel"
+	},
+    "classmethod": {
+		"prefix": "class method",
+		"body": 
+        [
+        "proc ${class_name}.${method_name} {",  
+        "\t${pass} \n}"
+        ],
+		"description": "Code snippet for a class method definition",
+		"scope": "source.chapel"
+	}
+
+}
